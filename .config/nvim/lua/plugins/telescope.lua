@@ -1,5 +1,3 @@
--- See `:help telescope.builtin`
-
 return {
     "nvim-telescope/telescope.nvim",
     event = "VimEnter",

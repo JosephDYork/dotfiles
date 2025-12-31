@@ -17,6 +17,8 @@ return {
             lua = { "stylua" },
             rust = { "rustfmt", lsp_format = "fallback" },
             python = { "black" },
+            cs = { "csharpier" },
+            csproj = { "csharpier" },
 
             -- Conform can also run multiple formatters sequentially
             -- python = { "isort", "black" },
@@ -34,6 +36,14 @@ return {
                     "$FILENAME",
                     "-",
                 },
+            },
+            csharpier = {
+                command = "csharpier",
+                args = {
+                    "format",
+                    "--write-stdout",
+                },
+                to_stdin = true,
             },
         },
     },

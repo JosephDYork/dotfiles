@@ -42,6 +42,10 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.inccommand = "split"
 vim.opt.cmdheight = 1
+vim.opt.wrap = false
+
+-- fix the appearence of diffs
+vim.opt.fillchars:append { diff = " " }
 
 -- Do some char substitutions so you can see tabs and trails
 vim.o.list = true
