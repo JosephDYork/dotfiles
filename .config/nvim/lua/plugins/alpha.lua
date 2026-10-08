@@ -5,7 +5,7 @@ return {
     config = function()
         local alpha = require("alpha")
         local dashboard = require("alpha.themes.dashboard")
-        vim.g.startuptime = vim.loop.hrtime()
+        vim.g.startuptime = vim.uv.hrtime()
         dashboard.section.header.val = {
             [[                                #******************                    ]],
             [[                              #*******************                     ]],

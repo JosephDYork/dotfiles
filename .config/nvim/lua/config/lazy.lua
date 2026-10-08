@@ -41,7 +41,6 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.inccommand = "split"
-vim.opt.cmdheight = 1
 vim.opt.wrap = false
 
 -- fix the appearence of diffs

@@ -73,6 +73,20 @@ return {
             end,
         })
 
+        -- LSP Server Config
+        local servers = {
+            texlab = {},
+        }
+
+        require("mason-lspconfig").setup({
+            ensure_installed = vim.tbl_keys(servers),
+        })
+
+        for server, opts in pairs(servers) do
+            vim.lsp.config(server, opts)
+            vim.lsp.enable(server)
+        end
+
         -- Diagnostic Config
         -- See :help vim.diagnostic.Opts
         vim.diagnostic.config({
@@ -81,10 +95,10 @@ return {
             underline = { severity = vim.diagnostic.severity.ERROR },
             signs = vim.g.have_nerd_font and {
                 text = {
-                    [vim.diagnostic.severity.ERROR] = "E! ",
-                    [vim.diagnostic.severity.WARN] = "W! ",
-                    [vim.diagnostic.severity.INFO] = "I! ",
-                    [vim.diagnostic.severity.HINT] = "H! ",
+                    [vim.diagnostic.severity.ERROR] = "E",
+                    [vim.diagnostic.severity.WARN] = "W",
+                    [vim.diagnostic.severity.INFO] = "I",
+                    [vim.diagnostic.severity.HINT] = "H",
                 },
             } or {},
             virtual_text = {
