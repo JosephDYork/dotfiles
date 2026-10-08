@@ -1,12 +1,11 @@
 return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    main = "nvim-treesitter.configs", -- Sets main module to use for opts
+    "folke/lazydev.nvim",
+    ft = "lua", -- only load on lua files
     opts = {
-        ensure_installed = { "bash", "c", "rust", "nasm", "diff", "lua", "luadoc", "vim", "vimdoc" },
-        auto_install = true,
-        highlight = {
-            enable = true,
+        library = {
+            -- See the configuration section for more details
+            -- Load luvit types when the `vim.uv` word is found
+            { path = "${3rd}/luv/library", words = { "vim%.uv" } },
         },
     },
 }

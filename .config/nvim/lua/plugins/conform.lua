@@ -19,6 +19,7 @@ return {
             python = { "black" },
             cs = { "csharpier" },
             csproj = { "csharpier" },
+            tex = { "latexindent" },
 
             -- Conform can also run multiple formatters sequentially
             -- python = { "isort", "black" },

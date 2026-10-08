@@ -30,12 +30,12 @@ return { -- Autocompletion
             -- By default, you may press `<c-space>` to show the documentation.
             -- Optionally, set `auto_show = true` to show the documentation after a delay.
             documentation = { auto_show = true, auto_show_delay_ms = 500 },
-            ghost_text = { enabled = true },
+            ghost_text = { enabled = false },
             menu = { auto_show = true },
         },
 
         sources = {
-            default = { "lsp", "path", "snippets", "lazydev" },
+            default = { "lsp", "path", "lazydev" },
             providers = {
                 lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
             },

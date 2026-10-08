@@ -39,15 +39,7 @@ return {
             lualine_b = { "branch", "diff", "diagnostics" },
             lualine_c = { "filename" },
             lualine_x = {
-                "lsp_status",
-                icon = "", -- f013
-                symbols = {
-                    spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
-                    done = "✓",
-                    separator = " ",
-                },
-                ignore_lsp = {},
-                show_name = true,
+                { "lsp_status", icon = "" }, -- f013
             },
             lualine_y = { "progress" },
             lualine_z = { "location" },
